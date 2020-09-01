@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)http://visjs.org/examples/network/basicUsage.html -->
+<!-- saved from url=(0049)http://visjs.org/examples/network/basicUsage.html 
+Kally and Sophie   
+-->
 <html class="gr__visjs_org">
 
 <head>
@@ -36,12 +38,51 @@
     }, {
       id: 2,
       label: 'Node 2',
+    },{
+      id: 3,
+      label: 'Kally',
+    },{
+      id: 4,
+      label: 'Sophie',
+    },{
+      id: 5,
+      label: 'Kiwi',
+    },{
+      id: 6,
+      label: 'Kyle',
+    },{
+      id: 7,
+      label: 'Anna',
+    },{
+      id: 8,
+      label: 'Nicole',
+    },{
+      id: 9,
+      label: 'Brysen',
+    },{
+      id: 10,
+      label: 'Antonio',
+    },{
+      id: 11,
+      label: 'Ray',
+    },{
+      id: 12,
+      label: 'Matt Vav',
     }, ]);
 
     // create an array with edges
     var edges = new vis.DataSet([{
       from: 1,
       to: 2
+    },{
+      from: 3,
+      to: 8
+    },{
+      from: 4,
+      to: 7
+    },{
+      from: 7,
+      to: 8
     }, ]);
 
     // create a network
@@ -50,8 +91,30 @@
       nodes: nodes,
       edges: edges
     };
-    var options = {};
+    var options = {
+      nodes:{
+        color: {
+            border: '#000000',
+            background: '#ff0000',
+        },
+        shape: 'square'
+    }
+    };
     var network = new vis.Network(container, data, options);
+
+    nodes.update( {
+      id: 3, color: {
+            border: '#FFA500',
+            background: '#FFFF00',
+        }
+    });
+    nodes.update( {
+      id: 4, color: {
+            border: '#FFA500',
+            background: '#FFFF00',
+        }
+    });
+    console.log(nodes.id = 8);
   </script>
 
 
